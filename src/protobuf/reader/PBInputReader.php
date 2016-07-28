@@ -1,7 +1,7 @@
 <?php
 
 namespace GeTui\Notification\Protobuf\Reader;
-use GeTui\Notification\Protobuf\Encoding\base128varint;
+use GeTui\Notification\Protobuf\Encoding\Base128varint;
 
 /**
  * Abstract class for an input reader
@@ -15,7 +15,7 @@ abstract class PBInputReader
 
 	public function __construct()
 	{
-		$this->base128 = new base128varint(1);
+		$this->base128 = new Base128varint(1);
 	}
 
 	/**

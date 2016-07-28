@@ -1,7 +1,7 @@
 <?php
 
 namespace GeTui\Notification\Protobuf;
-use GeTui\Notification\Protobuf\Encoding\base128varint;
+use GeTui\Notification\Protobuf\Encoding\Base128varint;
 use GeTui\Notification\Protobuf\Reader\PBInputStringReader;
 use GeTui\Notification\Protobuf\Type\PBInt;
 use GeTui\Notification\Protobuf\Type\PBString;
@@ -53,7 +53,7 @@ abstract class PBMessage
     {
         $this->reader = $reader;
         $this->value = $this;
-        $this->base128 = new base128varint(PBMessage::MODUS);
+        $this->base128 = new Base128varint(PBMessage::MODUS);
     }
 
     /**
@@ -399,8 +399,8 @@ abstract class PBMessage
     private function getOriginClassName($className){
 
         $nss = [
-            "App\\Sdks\\Library\\Notification\\Protobuf\\Type\\",
-            "App\\Sdks\\Library\\Notification\\Igetui\\Reqs\\",
+            "GeTui\\Notification\\Protobuf\\Type\\",
+            "GeTui\\Notification\\Igetui\\Reqs\\",
         ];
 
         $ns = $nss[1];
